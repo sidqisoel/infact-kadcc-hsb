@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b4f6c" />
+  <title>InFacT — KADCC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-strip"><span>DEMO ENVIRONMENT</span> Synthetic patient data only · Browser-local storage · Not for clinical use</div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>IF</span></div>
+        <div><strong>InFacT</strong><small>KADCC Operations</small></div>
+      </div>
+      <nav id="roleNav" aria-label="Role views"></nav>
+      <div class="sidebar-foot">
+        <button class="nav-item" id="securityBtn"><span class="nav-icon">⌾</span><span>Deployment readiness</span></button>
+        <div class="secure-note"><span></span><div><b>Demo workspace</b><small>No real patient data</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="topbar-title"><p id="eyebrow">Hospital Sultanah Bahiyah</p><h1 id="pageTitle">Ward requester</h1></div>
+        <div class="topbar-actions">
+          <div class="sync"><span></span>Local state synced</div>
+          <button class="icon-btn" id="bellBtn" aria-label="Notifications">♢<i id="noticeCount">2</i></button>
+          <button class="profile" id="profileBtn"><span class="avatar">NA</span><span><b id="profileName">Nur Aina</b><small id="profileRole">HSB Ward Requester</small></span><em>⌄</em></button>
+          <div class="profile-menu" id="profileMenu"><button id="resetBtn">Reset demo data</button><button id="aboutBtn">About this prototype</button></div>
+        </div>
+      </header>
+      <section id="app" class="content" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast-wrap" id="toastWrap" aria-live="assertive"></div>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
